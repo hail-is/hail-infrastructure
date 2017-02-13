@@ -53,3 +53,8 @@ used above.
 
 The TeamCity Agent is installed at /home/ec2-user/BuildAgent.
 
+
+*REGARDING PIP:*
+
+I have used `sudo $(which pip) install foo`, I'm not sure if this is the correct
+way to do it or not, but it seems to work.
