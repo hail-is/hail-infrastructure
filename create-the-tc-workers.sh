@@ -14,8 +14,8 @@ sudo yum install nodejs
 
 pandoc --enablerepo=epel
 
-sudo pip install sphinx sphinx_rtd_theme notedown jupyter
-sudo pip install --upgrade six
+sudo $(which pip) install sphinx sphinx_rtd_theme notedown jupyter nbsphinx pandas matplotlib
+sudo $(which pip) install --upgrade six
 
 (cd /tmp/ && \
   curl -O http://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.7.tgz && \
@@ -32,6 +32,7 @@ sudo pip install --upgrade six
 
 ## install & configure, gcloud, see this page:
 ## https://cloud.google.com/storage/docs/gsutil_install#linux
+## move the `google-cloud-sdk` folder (probably in $HOME) to `/usr/local`
 
 ## copy over the `hail-tutorial-files`
 
