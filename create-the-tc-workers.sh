@@ -36,6 +36,8 @@ sudo $(which pip) install --upgrade six
 
 ## copy over the `hail-tutorial-files`
 
+echo 'install.packages(c("jsonlite", "logistf"), repos="http://cran.r-project.org/")' | sudo R --no-save
+
 export SPARK_HOME=/usr/local/spark-2.0.2-bin-hadoop2.7/
 export HAIL_HOME=/tmp/hail/
 PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.3-src.zip:$HAIL_HOME/python SPARK_CLASSPATH=$HAIL_HOME/build/libs/hail-all-spark.jar ./gradlew test shadowJar
