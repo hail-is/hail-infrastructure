@@ -2,9 +2,12 @@
  - make sure you have the hail-teamcity-ci.pem file handy, its on the CI master
    server and Dan has a copy on his laptop
  - log into aws.amazon.com
- - go to AMIs (on the left) and click hail-teamcity-image-n, where n is the
-   largest number
+ - Navigate to the EC2 console (under compute)
+ - There should now be a left sidebar with a button for AMIs (under IMAGES), click that.
+ - Click hail-teamcity-image-n, where n is the largest number
  - click Launch
+ - Leave the defaults (instance type t2.micro) and click "Review and Launch"
+ - At the "Select an existing key pair or create a new key pair" dialog, select the hail-teamcity-ci key pair.
  - note the launched instance's id
  - SSH into the machine using `-i /path/to/hail-teamcity-ci.pem` and the user
    `ec2-user`. The Public IP should be listed on the page that you were
